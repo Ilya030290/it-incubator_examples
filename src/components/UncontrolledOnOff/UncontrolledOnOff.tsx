@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 
-const UncontrolledOnOff = () => {
+type UncontrolledOnOffPropsType = {
+    onChange: (on: boolean) => void
+}
+
+const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
     let [on, setOn] = useState(false)
 
     const buttonOnStyle = {
@@ -30,10 +34,27 @@ const UncontrolledOnOff = () => {
         marginLeft: "5px",
         backgroundColor: on ? "green" : "red"
     }
+
+    const onClicked = () => {
+        setOn(true)
+        props.onChange(true)
+    }
+
+    const offClicked = () => {
+        setOn(false)
+        props.onChange(false)
+    }
+
     return (
         <div>
-            <button style={buttonOnStyle} onClick={() => setOn(true)}>On</button>
-            <button style={buttonOffStyle} onClick={() => setOn(false)}>Off</button>
+            <button style={buttonOnStyle}
+                    onClick={onClicked}>
+                On
+            </button>
+            <button style={buttonOffStyle}
+                    onClick={offClicked}>
+                Off
+            </button>
             <div style={radioButtonStyle}></div>
         </div>
     );

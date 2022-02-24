@@ -36,7 +36,9 @@ const OnOff = (props: OnOffPropsType) => {
     }
 
     const onClickChangeButtonToOn = () => props.onClick(true)
+
     const onClickChangeButtonToOff = () => props.onClick(false)
+
     return (
         <div>
             <button style={buttonOnStyle} onClick={onClickChangeButtonToOn}>On</button>
