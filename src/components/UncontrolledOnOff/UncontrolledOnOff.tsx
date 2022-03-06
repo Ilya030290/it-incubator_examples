@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 
 type UncontrolledOnOffPropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
-const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
-    let [on, setOn] = useState(false)
+export const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
+    let [on, setOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const buttonOnStyle = {
         width: "30px",
@@ -60,4 +61,3 @@ const UncontrolledOnOff = (props: UncontrolledOnOffPropsType) => {
     );
 };
 
-export default UncontrolledOnOff;

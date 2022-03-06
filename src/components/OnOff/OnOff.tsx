@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 type OnOffPropsType = {
     isOn: boolean
     onClick: (On: boolean) => void
 }
 
-const OnOff = (props: OnOffPropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
 
     const buttonOnStyle = {
         width: "30px",
@@ -48,4 +48,3 @@ const OnOff = (props: OnOffPropsType) => {
     );
 };
 
-export default OnOff;
