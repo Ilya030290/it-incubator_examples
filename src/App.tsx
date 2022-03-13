@@ -23,7 +23,12 @@ function App() {
                 <OnOff isOn={switchOn} onClick={setSwitchOn}/>
                 <UncontrolledAccordion titleValue={'Menu'}/>
                 {/*<UncontrolledRating onChange={}/>*/}
-                <Accordion   titleValue={'Menu'} collapsed={accordionCollapsed} onClick={changeCollapsed}/>
+                <Accordion onChange={() => {}}
+                           items={[{title: 'Ignat', value: 1},{title: 'Artur', value: 2},{title: 'Anton', value: 3}, {title: 'Zhanna', value: 4}]}
+                           titleValue={'Menu'}
+                           collapsed={accordionCollapsed}
+                           onClick={changeCollapsed}
+                />
             </div>
         </div>
     );
