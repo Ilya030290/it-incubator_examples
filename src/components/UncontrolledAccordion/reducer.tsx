@@ -1,7 +1,7 @@
 export const TOGGLE_COLLAPSED = "TOGGLE-COLLAPSED"
 
 export type ActionType = {
-    type: "TOGGLE-COLLAPSED"
+    type: string
 }
 
 export type StateType = {
