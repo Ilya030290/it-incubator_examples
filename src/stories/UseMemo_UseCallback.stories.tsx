@@ -80,7 +80,7 @@ export const HelpsToReactMemo = () => {
     )
 }
 
-export const likeUseCallback = () => {
+export const LikeUseCallback = () => {
 
     console.log('Like UseCallback');
 
